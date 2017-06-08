@@ -1,8 +1,16 @@
-import discord
+import sys
+try:
+  import discord
+except ModuleNotFoundError:
+  print("Please run\npython3.5 -m pip install -r requirements.txt\nto install dependancies")
+  sys.exit()
 
 bot = discord.Client()
 with open('bot.token', 'r') as fileIn:
   botToken = fileIn.read().replace('\n', '')
+  if botToken == "token":
+    print("Please put your bot's token in bot.token")
+    sys.exit()
 previousMsg = 0
 countingChannel == ""
 
