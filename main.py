@@ -12,7 +12,7 @@ with open('bot.token', 'r') as fileIn:
     print("Please put your bot's token in bot.token")
     sys.exit()
 previousMsg = 0
-countingChannel == ""
+countingChannel = ""
 
 async def isInt(s):
   try:
